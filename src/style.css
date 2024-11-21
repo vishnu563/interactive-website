@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+header a{
+    text-decoration: none;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+}
+.logo img{
+    width:6rem;
+}
+nav li{
+    list-style: none;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+    margin-left:50vw ;
+    gap: 5rem;
+    text-transform: uppercase;
+    font-family: "Comic Neue", serif;
+    font-weight:bold;
+}
+nav a{
+    padding: 0.5rem 1rem;
+    color: rgb(215, 158, 88);
+}
+nav a:hover{
+    background: rgb(215, 158, 88);
+    color: black;
+    border-radius: 0.2rem;
+    transition: 0.2s all linear;
+}
+.home{
+    height: 100vh;
+    padding-top: 3rem;
+    background-image: url('../images/home.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.home h2{
+    margin-top: 1rem;
+    margin-left: 50vw;
+    font-family: "Comic Neue", serif;
+    font-size: 70px;
+    letter-spacing: 0.5rem;
+    color: antiquewhite;
+}
+.home h2 span{
+    color: rgb(215, 158, 88);
+}
+.home p{
+    margin-top: 2rem;
+    margin-left: 54vw;
+    color: rgb(217, 210, 200);
+    font-family: "Karla", sans-serif;
+    letter-spacing: 0.2em;
+    text-align: center;
+    max-width: 30rem;
+    font-size: 30px;
+}
+.home button{
+    margin-top: 6rem;
+    margin-left: 48vw;
+    background: transparent;
+    padding: 1rem;
+    border: 1px solid rgb(180, 174, 115);
+    border-radius: 3rem;
+    color:rgb(180, 174, 115);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    font-family: "Karla", sans-serif;
+}
+.home button:hover{
+    border: 1px solid rgb(87, 70, 70);
+    background-color: rgb(180, 174, 115);
+    color: black;
+}
+.philosophy{
+    height: 100vh;
+    padding-top: 3rem;
+}
+.menu{
+    height: 100vh;
+    padding-top: 3rem;   
+}
+.puffs{
+    height: 100vh;
+    padding-top: 3rem;
+}
+.find-us{
+    height: 100vh;
+    padding-top: 3rem;
+}
+.feedback{
+    height: 100vh;
+    padding-top: 3rem;
+}

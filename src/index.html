@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,700" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
+        <a href="#" class="logo">
+            <img src="../images/logo.png" alt="Cafe-Logo">
+        </a>
         <nav>
-            <a href="#">Logo</a>
             <ul>
                 <li><a href="#philosophy">Philosophy</a></li>
                 <li><a href="#menu">Menu</a></li>
@@ -18,13 +23,16 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>Every great day starts with great coffee</h2>
-            <p>A day without coffee is a morning without sunshine and an evening without stars.</p>
-            <button id="menu"> Our Menu</button>
+        <section class="home" id="#">
+            <h2>Every great Day starts with great <span>Coffee</span></h2>
+            <p> &quot;A day without coffee is a morning without sunshine and an evening without stars.&quot;</p>
+            <div>
+                <button onclick=menu()>Our Offer</button>
+            </div>
+                
         </section>
 
-        <section id="Philosophy">
+        <section class="philosophy" id="philosophy">
             <h1>Philosophy</h1>
             <p>Each coffee bean tells a story—of earth, hands, and hearts dedicated to perfection. We celebrate the coffee experience in every detail, from th ecare ful selection process of the beans ,to the roasting and the final product.</p>
             <div class="phy-img">
@@ -40,7 +48,7 @@
             </div>
         </section>
 
-        <section id="menu">
+        <section class="menu" id="menu">
             <h1>Menu</h1>
             <p>From morning pick-me-ups to afternoon treats, we serve coffee perfection and delicious homemade bites.</p>
             <div class="menu-items">
@@ -82,12 +90,14 @@
                 </ol>
             </div>
         </section>
-        <h2>The Best Puffs in town</h2>
+        <section class="puffs">
+            <h2>The Best Puffs in town</h2>
         <p>
             Straight from the oven to your plate—come savor the warmth and freshness yourself!
         </p>
         <img src="" alt="puff">
-        <section id="find-us">
+        </section>
+        <section class="find-us" id="find-us">
             <h1>Find Us</h1>
             <p>Sit back and savor the finest coffee and snacks—we will take care of the rest.</p>
             <div>
@@ -107,7 +117,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="feedback">
             <h2>Share Your exp with us</h2>
             <form>
                 <label for="name">Name:</label>
