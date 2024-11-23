@@ -7,7 +7,6 @@ html{
     scroll-behavior: smooth;
 }
 header a{
-    margin-top: -1.5rem;
     text-decoration: none;
 }
 header{
@@ -16,23 +15,46 @@ header{
     width: 100%;
     height: 4rem;
     position: fixed;
+    background-color: rgb(116, 15, 15);
+}
+.logo{
+    display: flex;
+    flex-direction: row;
 }
 .logo img{
-    width:6rem;
+    width:8rem;
+    object-fit: cover;
+}
+header span{
+    font-family: "Protest Revolution", sans-serif;
+    text-decoration: none;
+    color: rgb(215, 158, 88);
+    margin-left: 3rem;
+    width: 100%;
+    font-size: 35px;
+    padding-top: 0.5rem;
+    font-weight: bolder;
 }
 nav li{
     list-style: none;
+    width:fit-content;
 }
 nav ul{
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
     display: flex;
     flex-direction: row;
     margin-top: 1.5em;
-    margin-left:50vw ;
     gap: 5rem;
     text-transform: uppercase;
     font-family: "Comic Neue", serif;
     font-weight:bold;
+    margin-left: 16rem;
+
 }
+/* .list-find{
+    padding-left: -3rem;
+} */
 nav a{
     padding: 0.5rem 1rem;
     color: rgb(215, 158, 88);
@@ -44,14 +66,14 @@ nav a:hover{
     transition: 0.2s all linear;
 }
 .home{
-    height: 100vh;
+    /* height: 100vh; */
     padding-top: 3rem;
     background-image: url('../images/home.jpg');
     background-position: center;
     background-size: cover;
 }
 .home h2{
-    margin-top: 1rem;
+    margin-top: 3rem;
     margin-left: 50vw;
     font-family: "Comic Neue", serif;
     font-size: 70px;
@@ -62,7 +84,7 @@ nav a:hover{
     color: rgb(215, 158, 88);
 }
 .home p{
-    margin-top: 2rem;
+    margin-top: 5rem;
     margin-left: 54vw;
     color: rgb(217, 210, 200);
     font-family: "Karla", sans-serif;
@@ -72,7 +94,8 @@ nav a:hover{
     font-size: 30px;
 }
 .home button{
-    margin-top: 6rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     margin-left: 45vw;
     background: transparent;
     padding: 1rem;
@@ -98,7 +121,7 @@ section h1{
     font-weight: lighter;
 }
 .philosophy{
-    height: 100vh;
+    /* height: 100vh; */
     padding-top: 3rem;
     background-image: url(../images/philosophy.jpg);
     background-position: center;
@@ -184,6 +207,10 @@ section h1{
     width: 7rem;
     border-radius: 50%;
     background-color: blanchedalmond;
+    transition: 0.6s ease-out;
+}
+.menu-items img:hover{
+    transform: rotate(360deg);
 }
 .combo{
     display: grid;
@@ -236,6 +263,37 @@ section h1{
     height: 100vh;
     padding-top: 3rem;
     background-color:bisque;
+}
+.find-us>p{
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
+    font-size: 30px;
+    font-family: "Exo 2", sans-serif;
+}
+.contact-details{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 10rem;
+}
+.contact-details img{
+    border-radius: 50%;
+    width: 7rem;
+    background-color:rgb(220, 200, 171);
+}
+.contact-details h3{
+    font-size: 30px;
+    margin: 1.5rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: lighter;
+}
+.contact-details p{
+    font-family: "Exo 2", sans-serif;
+}
+.location-para{
+    text-align: center;
+    width: 9rem;
 }
 .feedback{
     height: 100vh;
