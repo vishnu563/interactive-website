@@ -17,6 +17,7 @@ header{
     position: fixed;
     background-color: rgb(116, 15, 15);
     z-index: 1;
+    animation: nav-load 1s ease-in;
 }
 .logo{
     display: flex;
@@ -47,12 +48,12 @@ nav li{
 nav ul{
     display: flex;
     flex-direction: row;
-    margin-top: 1.5em;
+    margin-top: 1em;
     gap: 5rem;
     text-transform: uppercase;
     font-family: "Comic Neue", serif;
     font-weight:bold;
-    margin-left: 16rem;
+    margin-left: 21rem;
 
 }
 nav li:hover{
@@ -77,6 +78,7 @@ nav li:hover{
     font-size: 60px;
     letter-spacing: 0.5rem;
     color: antiquewhite;
+    transition: main-load 1s ease-out;
 }
 .home span{
     display: inline-block;
@@ -105,9 +107,11 @@ nav li:hover{
     text-align: center;
     max-width: 30rem;
     font-size: 30px;
+    transition: main-load 1s ease-out;
 }
  .offer{
     cursor: pointer;
+    transition: main-load 1s ease-out;
  }
 .offer ul{
     display: flex;
@@ -465,4 +469,25 @@ footer{
     align-items: center;
     justify-content: center;
     font-family: "Exo 2", sans-serif;
+}
+
+@keyframes nav-load{
+    0%{
+      
+        transform: translateY(-100px);
+    }
+    100%{
+        
+        transform: translateY(0);
+    }
+}
+@keyframes main-load{
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
