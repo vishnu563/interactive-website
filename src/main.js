@@ -28,3 +28,6 @@ function scrolltoFind(){
         findElement.scrollIntoView();
     }
 }
+const currentYear = new Date().getFullYear();
+
+document.getElementById('year').textContent = currentYear;

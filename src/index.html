@@ -68,7 +68,7 @@
 
         <section class="menu" id="menu">
             <h1 class="block">Menu</h1>
-            <p class="block">&apos;From morning pick-me-ups to afternoon treats, we serve coffee perfection and <br><span>Delicious Homemade Bites.&apos;</span></p>
+            <p class="block">From morning pick-me-ups to afternoon treats, we serve coffee perfection and <br><span>Delicious Homemade Bites.</span></p>
             <div class="menu-items block">
                 <div>
                     <img src="../images/coffee.png" alt="Coffee">
@@ -145,20 +145,27 @@
         </section>
 
         <section class="feedback">
-            <h2>Share Your exp with us</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="feedback">Feedback</label>
-                <textarea id="feedback"></textarea>
-                <input type="submit" value="Send">
+            <h2 class="block">Share Your Experience <br> with <span>C<sup>3</sup></span></h2>
+            <form class="block">
+                <div class="entry-area">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="entry-area">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="entry-area">
+                    <label for="feedback">Feedback</label>
+                    <textarea id="feedback" required></textarea>
+                </div>
+                <button>Send</button>
             </form>
+            <div></div>
         </section>
     </main>
     <footer>
-
+        <p>&copy; <span id="year"></span> Cozy Corner Café . All rights reserved.</p>
     </footer>
     <script src="./main.js"></script>
 </body>

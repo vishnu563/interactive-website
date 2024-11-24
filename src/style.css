@@ -64,6 +64,7 @@ nav li:hover{
 }
 .home{
     height: 100vh;
+    width: 100%;
     padding-top: 3rem;
     background-image: url('../images/home.jpg');
     background-position: center;
@@ -154,6 +155,7 @@ section h1{
     font-weight: lighter;
 }
 .philosophy{
+    width: 100%;
     padding-top: 3rem;
     background-image: url(../images/philosophy.jpg);
     background-position: center;
@@ -182,6 +184,7 @@ section h1{
     gap: 1.25rem;
     padding: 1.25rem;
     margin-left: 3rem;
+    
 }
 .phi-img img{
     width: 100%;
@@ -204,6 +207,7 @@ section h1{
     z-index: 0.5;
 }
 .menu{
+    width: 100%;
     padding-top: 3rem; 
     background-image: url(../images/menu.jpg); 
     background-position: center;
@@ -221,17 +225,20 @@ section h1{
 }
 .menu span{
     display: inline-block;
-    width: 25ch;
+    width: 28ch;
     white-space: nowrap;
     overflow: hidden;
-    animation: type 6s steps(25) forwards infinite;
+    font-family: monospace;
+    animation: type 10s steps(25) forwards infinite;
+    color: brown;
+    letter-spacing: 2px;
 }
 @keyframes type{
     0%,100%{
         width: 0;
     }
     50%{
-        width: 25ch;
+        width: 28ch;
     }
  }
 .menu-items{
@@ -283,6 +290,7 @@ section h1{
     color: aliceblue;
     background-image: url(../images/puff\ bg.jpg);
     height: 100vh;
+    width: 100%;
     padding-top: 3rem;
 }
 .puffs h2{
@@ -295,7 +303,7 @@ section h1{
     color: rgb(215, 158, 88);
 }
 .puffs img{
-    margin-left: 45%;
+    margin-left: 38%;
     margin-top:-20rem ;
     width: 40rem;
 }
@@ -308,6 +316,7 @@ section h1{
 }
 .find-us{
     height: 100vh;
+    width: 100%;
     padding-top: 3rem;
     background-color:bisque;
 }
@@ -342,10 +351,6 @@ section h1{
     text-align: center;
     width: 9rem;
 }
-.feedback{
-    height: 100vh;
-    padding-top: 3rem;
-}
 
 @keyframes appear {
     from{
@@ -361,9 +366,9 @@ section h1{
 .block{
     animation: appear linear;
     animation-timeline: view();
-    animation-range: entry 0 cover 30%;
+    animation-range: entry 0 cover 25%;
 }
-@keyframes move {
+@keyframes fade-in {
     from{
         opacity: 0;
         transform: translateX(150px);
@@ -373,8 +378,91 @@ section h1{
         transform: translateX(0px);
     }
 }
+
 .puff-image{
-    animation: move linear;
+    animation: fade-in linear;
     animation-timeline: view();
     animation-range: entry 0 cover 30%;
+}
+.feedback{
+    height: min-content;
+    width: 100%;
+    padding-top: 3rem;
+    background-color:rgb(230, 211, 187);
+}
+.feedback h2{
+    font-family: "Comic Neue", serif;
+    font-size: 80px;
+    width: 20rem;
+    margin-left: 20rem;
+}
+.feedback span{
+    font-family: "Protest Revolution", sans-serif;
+    color: rgb(215, 158, 88);
+}
+.feedback form{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    max-width:16rem ;
+    height: 20rem;
+    gap: 5px;
+    padding: 0rem 2.5rem;
+    justify-content: center;
+    margin-left: 30rem;
+}
+form textarea{
+    min-width: 10rem;
+    max-width: 11rem; 
+    min-height: 4rem;
+    max-height: 4rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    margin-top: 0.5rem;
+}
+form input,form textarea{
+    outline: none;
+    border-radius: 0.2rem;
+    border: 1px solid;
+    background: transparent;
+}
+form input{
+    margin-top: 0.5rem;
+    height: 2rem;
+    padding-left: 0.5rem;
+}
+form label{
+    color: rgba(31, 24, 24, 0.8);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding-left:0.5rem;
+    letter-spacing: 2px;
+}
+form button{
+    text-transform: uppercase;
+    width: 5rem;
+    height: 2rem;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    letter-spacing: 2px;
+    background: #ff6c00;
+    color: antiquewhite;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.feedback>div{
+    padding: 2rem;
+}
+footer{
+    background-color: rgb(107, 25, 25);
+    width: 100%;
+    height: 3rem;
+    color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Exo 2", sans-serif;
 }
