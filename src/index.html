@@ -16,32 +16,41 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">
-            <img src="../images/logo.png" alt="Cafe-Logo">
-            <span>Cozy Corner Café</span>
-        </a>
+        <div class="logo">
+            <img onclick="scrolltoHome()" src="../images/logo.png" alt="Cafe-Logo">
+            <span onclick="scrolltoHome()">Cozy Corner Café</span>
+        </div>
         <nav>
             <ul>
-                <li><a href="#philosophy">Who We Are</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li class="list-find"><a href="#find-us">Find Us</a></li>
+                <li onclick="scrolltoStory()">Who We Are</li>
+                <li onclick="scrolltoMenu()">Menu</li>
+                <li onclick="scrolltoFind()">Find Us</li>
             </ul> 
         </nav>
     </header>
     <main>
-        <section class="home" id="#">
-            <h2>Every great Day starts with great <span>Coffee</span></h2>
+        <section class="home" id="home">
+            <h2>Every great Day starts with great <br><span>Coffee</span></h2>
             <p> &quot;A day without coffee is a morning without sunshine and an evening without stars.&quot;</p>
-            <div>
-                <button onclick=menu()>Our Offer</button>
-            </div>
+            <aside class="offer" onclick="scrolltoOffer()">
+                <ul>
+                    <li>O</li>
+                    <li>U</li>
+                    <li>R</li>
+                    <li>O</li>
+                    <li>F</li>
+                    <li>F</li>
+                    <li>E</li>
+                    <li>R</li>
+                </ul>
+            </aside>
                 
         </section>
 
         <section class="philosophy" id="philosophy">
-            <h1>Our Story</h1>
-            <p>&apos;At our café, we are driven by a deep love for hospitality, a passion for experimenting with flavors, and a commitment to creating a warm, welcoming environment. Every cup we serve and every dish we prepare is crafted with care, aiming to provide a delightful experience that brings people together.&apos;</p>
-            <div class="phi-img">
+            <h1 class="block">Our Story</h1>
+            <p class="block">&apos;At our café, we are driven by a deep love for hospitality, <span>a passion for experimenting with flavors,</span> and a commitment to creating a warm, welcoming environment. <span>Every cup we serve and every dish we prepare is crafted with care,</span> aiming to provide a delightful experience that brings people together.&apos;</p>
+            <div class="phi-img block">
                 <div class="img">
                     <img src="../images/eco farm.jpg" alt="ECO">
                     <h3>100% Ecological farm</h3>
@@ -58,9 +67,9 @@
         </section>
 
         <section class="menu" id="menu">
-            <h1>Menu</h1>
-            <p>&apos;From morning pick-me-ups to afternoon treats, we serve coffee perfection and delicious homemade bites.&apos;</p>
-            <div class="menu-items">
+            <h1 class="block">Menu</h1>
+            <p class="block">&apos;From morning pick-me-ups to afternoon treats, we serve coffee perfection and <br><span>Delicious Homemade Bites.&apos;</span></p>
+            <div class="menu-items block">
                 <div>
                     <img src="../images/coffee.png" alt="Coffee">
                     <h3>Coffee</h3>
@@ -78,7 +87,7 @@
                     <img src="../images/puff.png" alt="puffs">
                     <h3>Puffs</h3>
                     <ol>
-                        <li>Veg Puff</li>
+                        <li id="combo">Veg Puff</li>
                         <li>Paneer Puff</li>
                         <li>Mushroom Puff</li>
                         <li>Cheese Puff</li>
@@ -94,7 +103,7 @@
                     </ol>
                 </div>
             </div>
-            <div class="combo">
+            <div class="combo block">
                 <img src="../images/combo.png" alt="combo">
                 <h3>Combos</h3>
                 <ol>
@@ -110,12 +119,12 @@
         <p>
             &apos; Straight from the oven to your plate—come savor the warmth and freshness yourself ! &apos;
         </p>
-        <img src="../images/best puffs.png" alt="puff">
+        <img class="puff-image" src="../images/best puffs.png" alt="puff">
         </section>
         <section class="find-us" id="find-us">
-            <h1>Find Us</h1>
-            <p>Sit back and savor the finest coffee and snacks—we will take care of the rest.</p>
-            <div class="contact-details">
+            <h1 class="block">Find Us</h1>
+            <p class="block">Sit back and savor the finest coffee and snacks—we will take care of the rest.</p>
+            <div class="contact-details block">
                 <div>
                     <img src="../images/location.png" alt="Location">
                     <h3>Location</h3>
@@ -151,5 +160,6 @@
     <footer>
 
     </footer>
+    <script src="./main.js"></script>
 </body>
 </html>

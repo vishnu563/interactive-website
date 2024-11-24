@@ -16,32 +16,35 @@ header{
     height: 4rem;
     position: fixed;
     background-color: rgb(116, 15, 15);
+    z-index: 1;
 }
 .logo{
     display: flex;
     flex-direction: row;
 }
 .logo img{
-    width:8rem;
+    width:6rem;
     object-fit: cover;
+    cursor: pointer;
 }
 header span{
     font-family: "Protest Revolution", sans-serif;
     text-decoration: none;
     color: rgb(215, 158, 88);
     margin-left: 3rem;
-    width: 100%;
+    width: fit-content;
     font-size: 35px;
     padding-top: 0.5rem;
     font-weight: bolder;
+    cursor: pointer;
 }
 nav li{
     list-style: none;
     width:fit-content;
+    padding: 0.5rem 1rem;
+    color: rgb(215, 158, 88);
 }
 nav ul{
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr); */
     display: flex;
     flex-direction: row;
     margin-top: 1.5em;
@@ -52,21 +55,15 @@ nav ul{
     margin-left: 16rem;
 
 }
-/* .list-find{
-    padding-left: -3rem;
-} */
-nav a{
-    padding: 0.5rem 1rem;
-    color: rgb(215, 158, 88);
-}
-nav a:hover{
+nav li:hover{
     background: rgb(215, 158, 88);
     color: black;
     border-radius: 0.2rem;
     transition: 0.2s all linear;
+    cursor: pointer;
 }
 .home{
-    /* height: 100vh; */
+    height: 100vh;
     padding-top: 3rem;
     background-image: url('../images/home.jpg');
     background-position: center;
@@ -76,15 +73,30 @@ nav a:hover{
     margin-top: 3rem;
     margin-left: 50vw;
     font-family: "Comic Neue", serif;
-    font-size: 70px;
+    font-size: 60px;
     letter-spacing: 0.5rem;
     color: antiquewhite;
 }
-.home h2 span{
+.home span{
+    display: inline-block;
+    font-family: monospace;
+    width: 7ch;
     color: rgb(215, 158, 88);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(6) forwards infinite;
+    font-size: 90px;
 }
+@keyframes typing{
+    0%,100%{
+        width: 0;
+    }
+    50%{
+        width: 7ch;
+    }
+ }
 .home p{
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: 54vw;
     color: rgb(217, 210, 200);
     font-family: "Karla", sans-serif;
@@ -93,25 +105,58 @@ nav a:hover{
     max-width: 30rem;
     font-size: 30px;
 }
-.home button{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 45vw;
-    background: transparent;
-    padding: 1rem;
-    border: 1px solid rgb(180, 174, 115);
-    border-radius: 3rem;
-    color:rgb(180, 174, 115);
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    transition: 0.3s ease-in;
+ .offer{
     cursor: pointer;
-    font-family: "Karla", sans-serif;
+ }
+.offer ul{
+    display: flex;
+    margin-left: 12rem;
 }
-.home button:hover{
-    border: 1px solid rgb(87, 70, 70);
-    background-color: rgb(180, 174, 115);
-    color: black;
+.offer li{
+    list-style: none;
+    font-size: 3em;
+    letter-spacing:1rem;
+    color: #484848;
+    text-shadow: none;
+    animation: animate 1s infinite linear;
+}
+@keyframes animate{
+    0%{
+        color: #484848;
+        text-shadow: none;
+    }
+    18%{
+        color: #484848;
+        text-shadow: none;
+    }
+    20%{
+        color: #fff900;
+        text-shadow: 0 0 0.5rem #fff900, 0 0 1.5rem #ff6c00;
+    }
+    30%{
+        color: #484848;
+        text-shadow: none;
+    }
+    35%{
+        color: #fff900;
+        text-shadow: 0 0 0.5rem #fff900, 0 0 1.5rem #ff6c00;
+    }
+    70%{
+        color: #484848;
+        text-shadow: none;
+    }
+    85%{
+        color: #fff900;
+        text-shadow: 0 0 0.5rem #fff900, 0 0 1.5rem #ff6c00;
+    }
+    90%{
+        color: #484848;
+        text-shadow: none;
+    }
+    100%{
+        color: #484848;
+        text-shadow: none;
+    }
 }
 section h1{
     display: flex;
@@ -121,11 +166,13 @@ section h1{
     font-weight: lighter;
 }
 .philosophy{
-    /* height: 100vh; */
     padding-top: 3rem;
     background-image: url(../images/philosophy.jpg);
     background-position: center;
     background-size: cover;
+}
+.philosophy span{
+    color: rgb(215, 158, 88);
 }
 .philosophy h1{
     color:antiquewhite;
@@ -176,14 +223,29 @@ section h1{
 }
 .menu p{
     text-align: center;
-    width: 40rem;
+    width: 37rem;
     font-size: 30px;
     margin-top: 2rem;
-    margin-left: 3rem;
+    margin-left: 20rem;
     font-family: "Sour Gummy", sans-serif;
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
+.menu span{
+    display: inline-block;
+    width: 25ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: type 6s steps(25) forwards infinite;
+}
+@keyframes type{
+    0%,100%{
+        width: 0;
+    }
+    50%{
+        width: 25ch;
+    }
+ }
 .menu-items{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -208,9 +270,6 @@ section h1{
     border-radius: 50%;
     background-color: blanchedalmond;
     transition: 0.6s ease-out;
-}
-.menu-items img:hover{
-    transform: rotate(360deg);
 }
 .combo{
     display: grid;
@@ -298,4 +357,36 @@ section h1{
 .feedback{
     height: 100vh;
     padding-top: 3rem;
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.block{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+}
+@keyframes mov {
+    from{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.puff-image{
+    animation: mov linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
 }
