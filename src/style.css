@@ -125,33 +125,21 @@ nav li:hover{
         color: #484848;
         text-shadow: none;
     }
-    18%{
-        color: #484848;
-        text-shadow: none;
-    }
     20%{
-        color: #fff900;
-        text-shadow: 0 0 0.5rem #fff900, 0 0 1.5rem #ff6c00;
-    }
-    30%{
         color: #484848;
         text-shadow: none;
     }
-    35%{
+    40%{
         color: #fff900;
         text-shadow: 0 0 0.5rem #fff900, 0 0 1.5rem #ff6c00;
     }
-    70%{
+    60%{
         color: #484848;
         text-shadow: none;
     }
-    85%{
+    80%{
         color: #fff900;
         text-shadow: 0 0 0.5rem #fff900, 0 0 1.5rem #ff6c00;
-    }
-    90%{
-        color: #484848;
-        text-shadow: none;
     }
     100%{
         color: #484848;
@@ -375,10 +363,10 @@ section h1{
     animation-timeline: view();
     animation-range: entry 0 cover 30%;
 }
-@keyframes mov {
+@keyframes move {
     from{
         opacity: 0;
-        transform: translateX(200px);
+        transform: translateX(150px);
     }
     to{
         opacity: 1;
@@ -386,7 +374,7 @@ section h1{
     }
 }
 .puff-image{
-    animation: mov linear;
+    animation: move linear;
     animation-timeline: view();
     animation-range: entry 0 cover 30%;
 }
