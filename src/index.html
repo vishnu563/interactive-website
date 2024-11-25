@@ -11,21 +11,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
+        <nav>
         <div class="logo">
             <img onclick="scrolltoHome()" src="../images/logo.png" alt="Cafe-Logo">
             <span onclick="scrolltoHome()">Cozy Corner Café</span>
         </div>
-        <nav>
-            <ul>
+            <ul id="nav-list">
                 <li onclick="scrolltoStory()">Who We Are</li>
                 <li onclick="scrolltoMenu()">Menu</li>
                 <li onclick="scrolltoFind()">Find Us</li>
-            </ul> 
+            </ul>
+            <div class="nav-icon">
+                <img onclick="toggleMenu()" src="../images/menu-bar.png" alt="menubar">
+            </div> 
         </nav>
     </header>
     <main>
@@ -146,7 +148,7 @@
 
         <section class="feedback">
             <h2 class="block">Share Your Experience <br> with <span>C<sup>3</sup></span></h2>
-            <form class="block">
+            <form class="block" onsubmit="handleSubmit(event)">
                 <div class="entry-area">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -168,5 +170,5 @@
         <p>&copy; <span id="year"></span> Cozy Corner Café . All rights reserved.</p>
     </footer>
     <script src="./main.js"></script>
-</body>
+    </body>
 </html>
