@@ -14,7 +14,11 @@ section h1{
     font-size: 50px;
     font-weight: lighter;
 }
-/* Nav Bar Start */
+
+
+
+
+/* NAV BAR START */
 header nav{
     display: flex;
     align-items: center;
@@ -78,9 +82,22 @@ nav ul li:hover{
     transition: 0.2s all linear;
     cursor: pointer;
 } 
-/* Nav Bar End */
+@keyframes nav-load{
+    0%{
+      
+        transform: translateY(-100px);
+    }
+    100%{
+        
+        transform: translateY(0);
+    }
+}
+/* NAV BAR END */
 
-/* Home Section Start */
+
+
+
+/* HOME SECTION START */
 .home{
     height: 100vh;
     width: 100%;
@@ -108,14 +125,6 @@ nav ul li:hover{
     animation: typing 4s steps(6) forwards infinite;
     font-size: 90px;
 }
-@keyframes typing{
-    0%,100%{
-        width: 0;
-    }
-    50%{
-        width: 7ch;
-    }
- }
 .home p{
     margin-top: 3rem;
     margin-left: 54vw;
@@ -125,25 +134,30 @@ nav ul li:hover{
     text-align: center;
     max-width: 30rem;
     font-size: 30px;
-
 }
- .offer{
-    cursor: pointer;
-
- }
 .offer ul{
     display: flex;
     margin-left: 12rem;
+    width: fit-content;  
+    cursor: pointer;
 }
-.offer li{
+.offer ul li{
     list-style: none;
     font-size: 3em;
     letter-spacing:1rem;
     color: #484848;
     text-shadow: none;
-    animation: animate 1s infinite linear;
+    animation: animate-offer 1s infinite linear;  
 }
-@keyframes animate{
+@keyframes typing{
+    0%,100%{
+        width: 0;
+    }
+    50%{
+        width: 7ch;
+    }
+ }
+@keyframes animate-offer{
     0%{
         color: #484848;
         text-shadow: none;
@@ -169,8 +183,20 @@ nav ul li:hover{
         text-shadow: none;
     }
 }
-/* Home Section End */
+@keyframes home-load {
+    from {
+      clip-path: polygon(-50% 50%, 50% 150%, 50% 150%, -50% 50%);
+    }
+    to {
+      clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
+    }
+  }
+/* HOME SECTION END */
 
+
+
+
+/* STORY SECTION START  */
 .philosophy{
     width: 100%;
     padding-top: 3rem;
@@ -194,7 +220,7 @@ nav ul li:hover{
     margin-left: 10rem;
     margin-top: 1rem;
 }
-.phi-img{
+.philosophy .phi-img{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 90%;
@@ -216,13 +242,19 @@ nav ul li:hover{
     font-family: "Sour Gummy", sans-serif;
     
 }
-.img{
+.philosophy .img{
     transition: 0.2s ease-out;
 }
-.img:hover{
+.philosophy .img:hover{
     transform: scale(1.1);
     z-index: 0.5;
 }
+/* STORY SECTION END  */
+
+
+
+
+/* MENU SECTION START */
 .menu{
     width: 100%;
     padding-top: 3rem; 
@@ -250,15 +282,7 @@ nav ul li:hover{
     color: brown;
     letter-spacing: 2px;
 }
-@keyframes type{
-    0%,100%{
-        width: 0;
-    }
-    50%{
-        width: 28ch;
-    }
- }
-.menu-items{
+.menu .menu-items{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
@@ -303,6 +327,20 @@ nav ul li:hover{
     font-size: 20px;
     font-family: "Exo 2", sans-serif; 
 }
+@keyframes type{
+    0%,100%{
+        width: 0;
+    }
+    50%{
+        width: 28ch;
+    }
+ }
+/* MENU SECTION END */
+
+
+
+
+/* PUFFS SECTION START */
 .puffs{
     color: aliceblue;
     background-image: url(../images/puff\ bg.jpg);
@@ -312,11 +350,11 @@ nav ul li:hover{
 }
 .puffs h2{
     margin: 5rem 1rem 1rem 5rem;
-    font-size: 80px;
+    font-size: 5em;
     width: 20rem;
     font-family: "Comic Neue", serif;
 }
-.puffs h2 span{
+.puffs h2>span{
     color: rgb(215, 158, 88);
 }
 .puffs img{
@@ -331,6 +369,27 @@ nav ul li:hover{
     width:25rem;
     font-family: "Exo 2", sans-serif;
 }
+.puff-image{
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+}
+@keyframes fade-in {
+    from{
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+/* PUFFS SECTION END */
+
+
+
+
+/* FIND-US SECTION START */
 .find-us{
     height: 100vh;
     width: 100%;
@@ -364,43 +423,12 @@ nav ul li:hover{
 .contact-details p{
     font-family: "Exo 2", sans-serif;
 }
-.location-para{
-    text-align: center;
-    width: 9rem;
-}
+/* FIND-US SECTION END */
 
-@keyframes appear {
-    from{
-        opacity: 0;
-        scale: 0.5;
-    }
-    to{
-        opacity: 1;
-        scale: 1;
-    }
-}
 
-.block{
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 25%;
-}
-@keyframes fade-in {
-    from{
-        opacity: 0;
-        transform: translateX(150px);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
 
-.puff-image{
-    animation: fade-in linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 30%;
-}
+
+/* FEEDBACK SECTION START */
 .feedback{
     height: min-content;
     width: 100%;
@@ -473,6 +501,12 @@ form button{
 .feedback>div{
     padding: 2rem;
 }
+/* FEEDBACK SECTION END */
+
+
+
+
+/* FOOTER SECTION START */
 footer{
     background-color: rgb(107, 25, 25);
     width: 100%;
@@ -482,39 +516,9 @@ footer{
     align-items: center;
     justify-content: center;
     font-family: "Exo 2", sans-serif;
-    animation: foot-load 2s ease-in;
+    animation: footer-load 2s ease-in;
 }
-@keyframes home-load {
-    from {
-      clip-path: polygon(-50% 50%, 50% 150%, 50% 150%, -50% 50%);
-    }
-    to {
-      clip-path: polygon(50% -50%, 150% 50%, 50% 150%, -50% 50%);
-    }
-  }
-@keyframes allcomponet-load{
-    from {
-        clip-path: inset(0 0 100% 0);
-      }
-      to {
-        clip-path: inset(0 0 0 0);
-      }
-    }
-.philosophy,.menu,.puffs,.feedback,.find-us{
-    animation: 2s allcomponet-load ease;
-}
-
-@keyframes nav-load{
-    0%{
-      
-        transform: translateY(-100px);
-    }
-    100%{
-        
-        transform: translateY(0);
-    }
-}
-@keyframes foot-load{
+@keyframes footer-load{
     0%{
         transform: translateY(100px);
     }
@@ -523,6 +527,48 @@ footer{
         transform: translateY(0);
     }
 }
+/* FOOTER SECTION END */
+
+
+
+
+/* COMPONENT LOAD ANIMATION */
+.philosophy,.menu,.puffs,.feedback,.find-us{
+    animation: 2s allcomponet-load ease;
+}
+@keyframes allcomponet-load{
+    from {
+        clip-path: inset(0 0 100% 0);
+      }
+      to {
+        clip-path: inset(0 0 0 0);
+      }
+    }
+
+
+
+
+/* APPEARENCE ANIMATION */
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.block{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 25%;
+}
+
+
+
+
+/* FOR MOBILE DEVICE */
 @media screen and (max-width:576px) {
 html{
     box-sizing: border-box;
@@ -530,6 +576,8 @@ html{
     padding: 0;
     background-color: rgb(255, 255, 255);
 }
+
+
 /* Nav Bar */
 header{
     width: 100%;
@@ -538,11 +586,11 @@ header{
     position: fixed;
     z-index: 1;
 }
-.logo{
-    width: 10rem;
-}
 .logo span{
-    font-size: 0.8em;
+    height: fit-content;
+    font-size: 2em;
+    margin-top: 0.4rem;
+    margin-left: 1.5rem;
 }
 nav ul{
     position: absolute;
@@ -554,10 +602,8 @@ nav ul{
     gap: 1rem;
     overflow: hidden;
     background-color: rgb(116, 15, 15);
-    /* margin-top: -0.5rem;
+    margin-top: -1rem;
     margin-left: 16rem;
-    font-size:small ;
-    width: 100%; */
 }
 #nav-list{
     transition: 1s;
@@ -571,16 +617,88 @@ nav ul{
 }
 
 
-.menu p{
-    margin-left: 0;
-    width: fit-content;
+/* Home Component */
+.home{
+    width: 100%;
+    height: 100%;
+    background-position:center;
+}
+.home h2{
+    max-width: 10rem;
+    margin-top: 3rem;
+    font-size: 3em;
+}
+.home h2 span{
     font-size: 1em;
 }
-.menu-items{
-    width: 4rem;
-    margin-left: 0;
-    gap: 0;
+.home p{
+    font-size: 1.5em;
+    max-width: 10rem;
+    margin-left: 50vw;
+    margin-right: 1rem;
+    margin-top: 2rem;
 }
+.offer ul li{
+    font-size: 2em;
+
+}
+.offer ul{
+    margin: 0 1rem;
+    padding: 3rem 2rem;
+}
+@keyframes typing{
+    0%,100%{
+        width: 0;
+    }
+    50%{
+        width: 8ch;
+    }
+ }
+
+
+
+/* Story Component */
+.philosophy p{
+    font-size: 1.5em;
+    max-width: 20rem;
+    margin-left: 3rem;
+    margin-top: 6rem;
+}
+.philosophy .phi-img{
+    display: flex;
+    flex-direction: column;
+}
+.phi-img img{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 20%;
+}
+
+
+
+/* Menu Component */
+.menu p{
+    width: fit-content;
+    font-size: 1.5em;
+    margin: 3rem auto;
+}
+.menu .menu-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-items>div>img, .menu-items>div>ol,.menu-items>div>h3{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 20%;
+}
+
+
+
+
+
+
+
 .puff-image{
     display: none;
     animation: none;
@@ -592,29 +710,5 @@ nav ul{
 .feedback h2,.feedback form,.contact-details{
     margin-left: 1rem;
 }
-.home{
-    width: 100%;
-    background-position:center;
 }
-.home h2{
-    max-width: 10rem;
-    margin-top: 3rem;
-    font-size: 1em;
-}
-.home h2 span{
-    font-size: 2em;
-}
-.home p{
-    font-size: 1em;
-    max-width: 10rem;
-    margin-left: 50vw;
-    margin-right: 1rem;
-    margin-top: 2rem;
-}
-.offer ul{
-    margin-top: 8.5rem;
-    margin-left: 6rem;
-    font-size: 0.5em;
-}
-}
-
+/* FOR MOBILE DEVICE  */
