@@ -349,7 +349,7 @@ nav ul li:hover{
     padding-top: 3rem;
 }
 .puffs h2{
-    margin: 5rem 1rem 1rem 5rem;
+    margin: 3rem 1rem 1rem 5rem;
     font-size: 5em;
     width: 20rem;
     font-family: "Comic Neue", serif;
@@ -363,10 +363,9 @@ nav ul li:hover{
     width: 40rem;
 }
 .puffs p{
-    font-size: 20px;
-    margin-top: 3rem;
-    margin-left: 4rem;
-    width:25rem;
+    font-size: 2em;
+    margin:-2rem 4rem auto;
+    width:30rem;
     font-family: "Exo 2", sans-serif;
 }
 .puff-image{
@@ -640,10 +639,10 @@ nav ul{
 }
 .offer ul li{
     font-size: 2em;
-
+    letter-spacing:1px;
 }
 .offer ul{
-    margin: 0 1rem;
+    margin: auto auto;
     padding: 3rem 2rem;
 }
 @keyframes typing{
@@ -660,9 +659,9 @@ nav ul{
 /* Story Component */
 .philosophy p{
     font-size: 1.5em;
-    max-width: 20rem;
-    margin-left: 3rem;
-    margin-top: 6rem;
+    max-width: 30rem;
+    margin: 4rem 1rem auto 1rem;
+    
 }
 .philosophy .phi-img{
     display: flex;
@@ -678,7 +677,7 @@ nav ul{
 
 /* Menu Component */
 .menu p{
-    width: fit-content;
+    width: 100%;
     font-size: 1.5em;
     margin: 3rem auto;
 }
@@ -686,23 +685,29 @@ nav ul{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 5.5rem;
 }
-.menu-items>div>img, .menu-items>div>ol,.menu-items>div>h3{
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 20%;
+.menu p>span{
+    width: 100%;
 }
 
 
 
+/* Puffs Component */
+.puffs h2{
+    width: 100%;
+    margin: 0;
+}
+.puffs p{
+    width: 100%;
+}
 
-
-
-
-.puff-image{
+.feedback,.find-us{
     display: none;
-    animation: none;
-    margin-left: 1rem;  
+}
+.puffs img{
+    width: 18rem;
+    margin: auto auto;
 }
 .puffs p{
     margin-left: 0;
@@ -712,3 +717,10 @@ nav ul{
 }
 }
 /* FOR MOBILE DEVICE  */
+
+@media screen and (max-width:300px){
+    .offer ul li{
+        font-size: 1em;
+        letter-spacing: 1px;
+    }
+}
