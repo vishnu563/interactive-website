@@ -405,9 +405,10 @@ nav ul li:hover{
 }
 .contact-details{
     margin-top: 1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-left: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
 }
 .contact-details img{
     border-radius: 50%;
@@ -616,7 +617,6 @@ nav ul{
 }
 .nav-icon img{
     margin-top: 1rem;
-    width: 2rem;
 }
 
 
