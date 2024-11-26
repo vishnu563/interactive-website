@@ -344,7 +344,6 @@ nav ul li:hover{
 .puffs{
     color: aliceblue;
     background-image: url(../images/puff\ bg.jpg);
-    height: 100vh;
     width: 100%;
     padding-top: 3rem;
 }
@@ -367,6 +366,7 @@ nav ul li:hover{
     margin:-2rem 4rem auto;
     width:30rem;
     font-family: "Exo 2", sans-serif;
+    padding-bottom: 4rem;
 }
 .puff-image{
     animation: fade-in linear;
@@ -376,7 +376,7 @@ nav ul li:hover{
 @keyframes fade-in {
     from{
         opacity: 0;
-        transform: translateX(150px);
+        transform: translateX(100px);
     }
     to{
         opacity: 1;
@@ -390,7 +390,7 @@ nav ul li:hover{
 
 /* FIND-US SECTION START */
 .find-us{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     padding-top: 3rem;
     background-color:bisque;
@@ -398,6 +398,7 @@ nav ul li:hover{
 .find-us>p{
     display: flex;
     justify-content: center;
+    width: fit-content;
     padding: 5rem 0;
     font-size: 30px;
     font-family: "Exo 2", sans-serif;
@@ -585,6 +586,9 @@ header{
     position: fixed;
     z-index: 1;
 }
+.logo{
+    width: 100%;
+}
 .logo span{
     height: fit-content;
     font-size: 2em;
@@ -616,24 +620,28 @@ nav ul{
 }
 
 
-/* Home Component */
+/* Home Section */
 .home{
     width: 100%;
     height: 100%;
     background-position:center;
 }
 .home h2{
-    max-width: 10rem;
+    max-width: 20rem;
     margin-top: 3rem;
-    font-size: 3em;
+    font-size: 2em;
 }
 .home h2 span{
     font-size: 1em;
 }
+.home span {
+    font-family: "Comic Neue", serif;
+    animation: typing 4s steps(7) forwards infinite;
+}
 .home p{
     font-size: 1.5em;
-    max-width: 10rem;
-    margin-left: 50vw;
+    max-width: 25rem;
+    margin-left: 15vw;
     margin-right: 1rem;
     margin-top: 2rem;
 }
@@ -656,7 +664,7 @@ nav ul{
 
 
 
-/* Story Component */
+/* Story Section */
 .philosophy p{
     font-size: 1.5em;
     max-width: 30rem;
@@ -675,7 +683,7 @@ nav ul{
 
 
 
-/* Menu Component */
+/* Menu Section */
 .menu p{
     width: 100%;
     font-size: 1.5em;
@@ -693,34 +701,127 @@ nav ul{
 
 
 
-/* Puffs Component */
+/* Puffs Section */
 .puffs h2{
-    width: 100%;
-    margin: 0;
+    width: fit-content;
+    margin: 2rem 4rem 0;
 }
 .puffs p{
-    width: 100%;
-}
-
-.feedback,.find-us{
-    display: none;
+    width: fit-content;
+    margin:1rem 1rem 0;
 }
 .puffs img{
     width: 18rem;
-    margin: auto auto;
+    margin: 2rem 3rem auto;
 }
-.puffs p{
-    margin-left: 0;
+@keyframes fade-in{
+0% {
+    opacity: 0;
+    transform: translateX(80px);
 }
-.feedback h2,.feedback form,.contact-details{
+100% {
+    opacity: 1;
+    transform: translateX(0px);
+}
+}
+
+
+
+/* Find-us Section */
+.find-us>p{
+    padding: 3rem 2rem;
+    letter-spacing: 0.5rem;
+}
+.find-us .contact-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+.contact-details>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+
+
+/* feedBack Section */
+
+.feedback h2{
     margin-left: 1rem;
 }
+.feedback form{
+    margin: auto;
 }
-/* FOR MOBILE DEVICE  */
+}
 
+/* Small Screen Mobiles */
+@media screen and (max-width:400px){
+    nav ul{
+        margin-left: 0;
+    }
+    .logo span{
+        font-size: 1.3em;
+    }
+    .home h2{
+        font-size: 1.5em;
+    }
+    .home p{
+        font-size: 1.3rem;
+        margin-left: 1rem;
+        max-width: 100%;
+    }
+    .home span{
+        font-family: "Comic Neue", serif;
+    }
+    .philosophy p {
+        font-size: 1em;
+    }
+    .philosophy .phi-img{
+        margin-left: 0;
+        padding-left: 4rem;
+    }
+    .phi-img img{
+        width: 80%;
+        height: 9rem;
+    }
+    .menu span{
+        animation: none;
+        font-size: 0.7em;
+        letter-spacing: 0;
+    }
+    .menu p{
+        font-size: 2em;
+    }
+    .menu .menu-items{
+        margin-left: 4rem;
+    }
+    .puffs h2{
+        width: 75%;
+        font-size: 3em;
+        margin: 2rem 3rem 0;
+    }
+    .puffs img{
+        animation: none;
+        width: 10rem;
+    }
+    .feedback h2{
+        font-size:3em;
+    }
+    .feedback h2{
+        width: auto;
+    }
+
+}
 @media screen and (max-width:300px){
     .offer ul li{
         font-size: 1em;
         letter-spacing: 1px;
+    }
+    .logo span{
+        font-size: 1em;
     }
 }
