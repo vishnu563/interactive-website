@@ -99,7 +99,7 @@ nav ul li:hover{
 
 /* HOME SECTION START */
 .home{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     padding-top: 3rem;
     background-image: url('../images/home.jpg');
@@ -350,7 +350,7 @@ nav ul li:hover{
 .puffs h2{
     margin: 3rem 1rem 1rem 5rem;
     font-size: 5em;
-    width: 20rem;
+    width: 16rem;
     font-family: "Comic Neue", serif;
 }
 .puffs h2>span{
@@ -568,6 +568,150 @@ footer{
 
 
 
+/* FOR TABLETS */
+@media screen and (min-device-width:577px) and (max-device-width:990px) {
+    .logo{
+        width: auto;
+    }
+    .logo span{
+        font-size: 2.3em;
+    }
+    nav ul {
+        gap: 0;
+    }
+    .home{
+        height: 100%;
+    }
+    .home h2{
+        font-size: 4.5em;
+    }
+    .home span{
+        font-size: 1.3em;
+        letter-spacing: 0;
+    }
+    @keyframes typing{
+        0%,100%{
+            width: 0px;
+        }
+        50%{
+            width: 6ch;
+        }
+    }
+    .home p{
+        margin-left: 34vw;
+        font-size: 3em;
+    }
+    .offer ul {
+        margin-top: 10rem;
+        margin-left: 0px;
+        justify-content: center;
+        width: 100%;
+    }
+    .philosophy p{
+        margin-left: 0;
+        font-size: 3em;
+    }
+    .philosophy .phi-img{
+        display: flex;
+        flex-direction: column;
+    }
+    .phi-img img{
+        height: 30rem;
+    }
+    .phi-img h3 {
+        font-size: 3em;
+    }
+    .menu p{
+        width: 100%;
+        margin-left: 0;
+        font-size:2.5em ;
+    }
+    .menu .menu-items{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-left:0 ;
+    }
+    .menu-items img{
+        width: 13rem;
+    }
+    .menu-items h3{
+        text-align: center;
+        font-size: 4em;
+    }
+    .combo h3{
+        text-align: center;
+        font-size: 4em;
+        margin-left: 0;
+    }
+    .combo{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+    }
+    .combo img{
+        width: 13rem;
+    }
+    .menu-items ol li,.combo ol li{
+        font-size: 3em;
+        text-align: center;
+    }
+    .menu-items>div{
+        text-align: center;
+    }
+    .puffs img{
+        width: 25rem;
+        margin: 3rem;
+    }
+    .puffs h2{
+        width: auto;
+        font-size: 7em;
+    }
+    .puffs p {
+        font-size: 3em;
+        width: fit-content;
+        text-align: center;
+    }
+    .find-us>p{
+        font-size: 3em;
+        text-align: center;
+    }
+    .contact-details{
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+    .contact-details>div{
+        text-align: center;
+    }
+    .contact-details img{
+        width: 13rem;
+    }
+    .contact-details h3{
+        text-align: center;
+        font-size: 4em;
+    }
+    .contact-details p{
+        font-size:2em ;
+    }
+    .feedback h2{
+        margin-left: 3rem;
+        width: fit-content;
+    }
+    .feedback form{
+        align-items: center;
+        margin: auto;
+    }
+}
+
+@media screen and (min-device-width:577px) and (max-device-width:723px) {
+    .logo span {
+        font-size: 1.4em;
+    }
+}
 
 /* FOR MOBILE DEVICE */
 @media screen and (max-width:576px) {
@@ -792,6 +936,7 @@ nav ul{
         animation: none;
         font-size: 0.7em;
         letter-spacing: 0;
+        white-space: normal;
     }
     .menu p{
         font-size: 2em;
@@ -800,16 +945,17 @@ nav ul{
         margin-left: 4rem;
     }
     .puffs h2{
-        width: 75%;
+        width: fit-content;
         font-size: 3em;
         margin: 2rem 3rem 0;
     }
     .puffs img{
         animation: none;
         width: 10rem;
+        margin: auto;
     }
     .feedback h2{
-        font-size:3em;
+        font-size:2em;
     }
     .feedback h2{
         width: auto;
@@ -817,11 +963,77 @@ nav ul{
 
 }
 @media screen and (max-width:300px){
+    .nav-icon img {
+        margin-left: 2.2rem;
+    }
+    .home h2{
+        letter-spacing: 0;
+        white-space: normal;
+    }
     .offer ul li{
         font-size: 1em;
         letter-spacing: 1px;
     }
     .logo span{
-        font-size: 1em;
+        font-size: 0.8em;
+    }
+    .home span{
+        animation: none;
+        width: fit-content;
+        white-space: normal;
+        letter-spacing:0;
+    }
+    form input, form textarea {
+        max-width: 5rem;
+        min-width: 5rem;
+    }
+    .menu .menu-items {
+        margin-left: 2rem;
+    }
+    .find-us>p {
+        padding: 0;
+        letter-spacing: 0.4rem;
+    }
+}
+@media screen and (max-width:200px){
+    .home h2{
+        letter-spacing: 0;
+        white-space: normal;
+    }
+    form input, form textarea {
+        max-width: 5rem;
+        min-width: 5rem;
+    }
+    form button{
+        margin-left: 0;
+    }
+    .find-us>p {
+        padding: 0; 
+        letter-spacing: 0;
+    }
+    .puffs p {
+        margin: 1rem 0rem 0;
+    }
+    .puffs h2 {
+        margin: 2rem 0rem 0;
+    }
+    .contact-details>div {
+        margin: 2rem 0 0 0;
+    }
+    .menu .menu-items {
+        margin-left: 0rem;
+        width: auto;
+    }
+    .combo img ,.combo h3{
+        margin-left: 0;
+    }
+    .feedback h2 {
+        font-size: 1.5em;
+    }
+    .logo span{
+        font-size: 0.7em;
+    }
+    .nav-icon img {
+        margin-left: 2.2rem;
     }
 }
