@@ -11,7 +11,7 @@ section h1{
     display: flex;
     justify-content: center;
     font-family: "Oswald", sans-serif;
-    font-size: 50px;
+    font-size: 7em;
     font-weight: lighter;
 }
 
@@ -33,7 +33,7 @@ header nav{
 }
 nav ul{
     display: flex;
-    gap: 6rem;
+    gap: 4rem;
     text-transform: uppercase;
     font-family: "Comic Neue", serif;
     font-weight:bold;
@@ -42,7 +42,6 @@ nav ul{
 }
 nav ul li{
     list-style: none;
-    width:fit-content;
     color: rgb(215, 158, 88);
     padding: 0.5rem 1rem;
 }
@@ -57,7 +56,6 @@ nav ul li{
     flex-direction: row;
     row-gap: 8rem;
     margin-left: -2.5rem;
-    width: 38rem;
 }
 .logo img{
     width:5rem;
@@ -99,8 +97,6 @@ nav ul li:hover{
 
 /* HOME SECTION START */
 .home{
-    height: 100%;
-    width: 100%;
     padding-top: 3rem;
     background-image: url('../images/home.jpg');
     background-position: center;
@@ -111,7 +107,7 @@ nav ul li:hover{
     margin-top: 3rem;
     margin-left: 50vw;
     font-family: "Comic Neue", serif;
-    font-size: 60px;
+    font-size: 4em;
     letter-spacing: 0.5rem;
     color: antiquewhite;
 }
@@ -123,7 +119,7 @@ nav ul li:hover{
     white-space: nowrap;
     overflow: hidden;
     animation: typing 4s steps(6) forwards infinite;
-    font-size: 90px;
+    font-size: 1.5em;
 }
 .home p{
     margin-top: 3rem;
@@ -133,12 +129,12 @@ nav ul li:hover{
     letter-spacing: 0.2em;
     text-align: center;
     max-width: 30rem;
-    font-size: 30px;
+    font-size: 2em;
 }
 .offer ul{
     display: flex;
     margin-left: 12rem;
-    width: fit-content;  
+    padding-bottom: 4rem;  
     cursor: pointer;
 }
 .offer ul li{
@@ -198,7 +194,6 @@ nav ul li:hover{
 
 /* STORY SECTION START  */
 .philosophy{
-    width: 100%;
     padding-top: 3rem;
     background-image: url(../images/philosophy.jpg);
     background-position: center;
@@ -214,23 +209,19 @@ nav ul li:hover{
     text-align: center;
     font-family: "Sour Gummy", sans-serif;
     color:rgb(255, 255, 255);
-    max-width: 60rem;
     letter-spacing: 0.2rem;
-    font-size: 30px;
-    margin-left: 10rem;
+    font-size: 2em;
     margin-top: 1rem;
 }
 .philosophy .phi-img{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 90%;
     gap: 1.25rem;
     padding: 1.25rem;
     margin-left: 2rem;
-    
 }
 .phi-img img{
-    width: 100%;
+    width: 90%;
     height: 15rem;
     object-fit:cover;
     border-radius: 0.8rem;
@@ -239,15 +230,14 @@ nav ul li:hover{
     display: flex;
     justify-content: center;    
     color: rgb(250, 250, 250);
-    font-family: "Sour Gummy", sans-serif;
-    
+    font-family: "Sour Gummy", sans-serif; 
 }
 .philosophy .img{
     transition: 0.2s ease-out;
 }
 .philosophy .img:hover{
     transform: scale(1.1);
-    z-index: 0.5;
+    z-index: 0.7;
 }
 /* STORY SECTION END  */
 
@@ -256,7 +246,6 @@ nav ul li:hover{
 
 /* MENU SECTION START */
 .menu{
-    width: 100%;
     padding-top: 3rem; 
     background-image: url(../images/menu.jpg); 
     background-position: center;
@@ -264,12 +253,9 @@ nav ul li:hover{
 }
 .menu p{
     text-align: center;
-    width: 37rem;
-    font-size: 30px;
+    font-size: 2em;
     margin-top: 2rem;
-    margin-left: 20rem;
     font-family: "Sour Gummy", sans-serif;
-    margin-top: 1rem;
     margin-bottom: 2rem;
 }
 .menu span{
@@ -291,14 +277,14 @@ nav ul li:hover{
 }
 .menu-items h3{
     padding: 0.3rem 1rem;
-    font-size: 30px;
+    font-size: 2em;
     font-family: "Oswald", sans-serif;
     font-weight: lighter;
 }
-.menu-items ol li{
+.menu-items ol li,.combo ol li{
     list-style: none;
     padding: 0.5rem 0;
-    font-size: 20px;
+    font-size: 1.5em;
     font-family: "Exo 2", sans-serif;  
 }
 .menu-items img{
@@ -312,7 +298,7 @@ nav ul li:hover{
     justify-content: center;
 }
 .combo h3{
-    font-size: 30px;
+    font-size: 2em;
     font-family: "Oswald", sans-serif;
     font-weight: lighter;
     margin-left: 5rem;
@@ -320,12 +306,6 @@ nav ul li:hover{
 .combo img{
     margin-left: 5rem;
     width: 7rem;
-}
-.combo ol li{
-    list-style: none;
-    padding: 0.6rem 0;
-    font-size: 20px;
-    font-family: "Exo 2", sans-serif; 
 }
 @keyframes type{
     0%,100%{
@@ -344,29 +324,26 @@ nav ul li:hover{
 .puffs{
     color: aliceblue;
     background-image: url(../images/puff\ bg.jpg);
-    width: 100%;
     padding-top: 3rem;
 }
 .puffs h2{
-    margin: 3rem 1rem 1rem 5rem;
-    font-size: 5em;
-    width: 16rem;
+    text-align: center;
+    font-size: 6em;
     font-family: "Comic Neue", serif;
 }
 .puffs h2>span{
     color: rgb(215, 158, 88);
 }
 .puffs img{
-    margin-left: 38%;
-    margin-top:-20rem ;
-    width: 40rem;
+    margin:3rem 0 0 20rem;
+    width: 30rem;
 }
 .puffs p{
-    font-size: 2em;
-    margin:-2rem 4rem auto;
-    width:30rem;
+    font-size: 3em;
+    margin:4rem 4rem auto;
     font-family: "Exo 2", sans-serif;
     padding-bottom: 4rem;
+    text-align: center;
 }
 .puff-image{
     animation: fade-in linear;
@@ -390,17 +367,13 @@ nav ul li:hover{
 
 /* FIND-US SECTION START */
 .find-us{
-    height: 100%;
-    width: 100%;
     padding-top: 3rem;
     background-color:bisque;
 }
 .find-us>p{
-    display: flex;
-    justify-content: center;
-    width: fit-content;
+    text-align: center;
     padding: 5rem 0;
-    font-size: 30px;
+    font-size: 2.5em;
     font-family: "Exo 2", sans-serif;
 }
 .contact-details{
@@ -410,14 +383,18 @@ nav ul li:hover{
     justify-content: space-evenly;
     padding-bottom: 2rem;
 }
+.contact-details>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .contact-details img{
     border-radius: 50%;
     width: 7rem;
     background-color:rgb(220, 200, 171);
 }
 .contact-details h3{
-    font-size: 30px;
-    margin: 1.5rem;
+    font-size: 2.5em;
     font-family: "Oswald", sans-serif;
     font-weight: lighter;
 }
@@ -456,7 +433,7 @@ nav ul li:hover{
     gap: 5px;
     padding: 0rem 2.5rem;
     justify-content: center;
-    margin-left: 30rem;
+    margin: auto;
 }
 form textarea{
     min-width: 10rem;
@@ -581,9 +558,6 @@ footer{
     }
     .home{
         height: 100%;
-    }
-    .home h2{
-        font-size: 4.5em;
     }
     .home span{
         font-size: 1.3em;
@@ -721,7 +695,9 @@ html{
     padding: 0;
     background-color: rgb(255, 255, 255);
 }
-
+section h1 {
+    font-size: 4em;
+}
 
 /* Nav Bar */
 header{
@@ -785,9 +761,7 @@ nav ul{
 .home p{
     font-size: 1.5em;
     max-width: 25rem;
-    margin-left: 15vw;
-    margin-right: 1rem;
-    margin-top: 2rem;
+    margin:2rem auto auto 10rem;
 }
 .offer ul li{
     font-size: 2em;
@@ -904,6 +878,9 @@ nav ul{
 
 /* Small Screen Mobiles */
 @media screen and (max-width:400px){
+    section h1 {
+        font-size: 3em;
+    }
     nav ul{
         margin-left: 0;
     }
@@ -916,10 +893,9 @@ nav ul{
     .home p{
         font-size: 1.3rem;
         margin-left: 1rem;
-        max-width: 100%;
     }
     .home span{
-        font-family: "Comic Neue", serif;
+        animation: typing 4s steps(6) forwards infinite;
     }
     .philosophy p {
         font-size: 1em;
@@ -938,21 +914,20 @@ nav ul{
         letter-spacing: 0;
         white-space: normal;
     }
-    .menu p{
-        font-size: 2em;
-    }
     .menu .menu-items{
         margin-left: 4rem;
     }
     .puffs h2{
-        width: fit-content;
         font-size: 3em;
         margin: 2rem 3rem 0;
+    }
+    .puffs p,.find-us>p{
+        font-size: 1.5em;
     }
     .puffs img{
         animation: none;
         width: 10rem;
-        margin: auto;
+        margin: 3rem 0 0 3rem;
     }
     .feedback h2{
         font-size:2em;
@@ -963,6 +938,9 @@ nav ul{
 
 }
 @media screen and (max-width:300px){
+    section h1 {
+        font-size: 3em;
+    }
     .nav-icon img {
         margin-left: 2.2rem;
     }
@@ -990,15 +968,28 @@ nav ul{
     .menu .menu-items {
         margin-left: 2rem;
     }
+    .puffs p{
+        font-size: 1em;
+    }
+    .puffs img{
+        width: 8rem;
+    }
     .find-us>p {
+        font-size: 1.5em;
         padding: 0;
         letter-spacing: 0.4rem;
     }
 }
 @media screen and (max-width:200px){
+    section h1 {
+        font-size: 2em;
+    }
     .home h2{
         letter-spacing: 0;
         white-space: normal;
+    }
+    .philosophy p {
+        font-size: 0.7em;
     }
     form input, form textarea {
         max-width: 5rem;
@@ -1013,6 +1004,7 @@ nav ul{
     }
     .puffs p {
         margin: 1rem 0rem 0;
+        font-size: 1em;
     }
     .puffs h2 {
         margin: 2rem 0rem 0;
@@ -1027,7 +1019,7 @@ nav ul{
     .combo img ,.combo h3{
         margin-left: 0;
     }
-    .feedback h2 {
+    .find-us>p ,.feedback h2{
         font-size: 1.5em;
     }
     .logo span{
@@ -1035,5 +1027,9 @@ nav ul{
     }
     .nav-icon img {
         margin-left: 2.2rem;
+    }
+    .puffs img {
+        margin: 0;
+        width: 7rem;
     }
 }
