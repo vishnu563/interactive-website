@@ -71,11 +71,11 @@ let getEmail = ()=>{
         .then((data) => data.json())
         .then((emails) => {
             const randomUser = emails[Math.floor(Math.random()*emails.length)];
-            const email = randomUser.email;
-            const user = email.split('@')[0];
+            const customerEmail = randomUser.email;
+            const user = customerEmail.split('@')[0];
             document.getElementById('customer').innerText = user;
-            console.log(email);
-            document.getElementById('customer-email').innerText = email;
+            console.log(customerEmail);
+            document.getElementById('customer-email').innerText = customerEmail;
         })
         .catch((err)=> console.log(err))
 }
