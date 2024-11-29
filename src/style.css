@@ -479,6 +479,20 @@ form button{
 .feedback>div{
     padding: 2rem;
 }
+.customer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 2em;  
+}
+#customer-email{
+    font-size: 0.3em;
+    color: black;
+}
+.customer p{
+    transition: 2s ease-in;
+}
 /* FEEDBACK SECTION END */
 
 
@@ -935,6 +949,9 @@ nav ul{
     .feedback h2{
         width: auto;
     }
+    .customer {
+        font-size: 1.5em;
+    }
 
 }
 @media screen and (max-width:300px){
@@ -956,7 +973,7 @@ nav ul{
         font-size: 0.8em;
     }
     .home span{
-        animation: none;
+        animation: typing 4s steps(7) forwards infinite;
         width: fit-content;
         white-space: normal;
         letter-spacing:0;
@@ -978,6 +995,19 @@ nav ul{
         font-size: 1.5em;
         padding: 0;
         letter-spacing: 0.4rem;
+    }
+    .customer {
+        font-size: 1em;
+    }
+    @keyframes typing{
+        0%, 100% {
+            width: 0;
+        }
+        
+        50% {
+            width: 7ch;
+        }
+
     }
 }
 @media screen and (max-width:200px){
@@ -1031,5 +1061,11 @@ nav ul{
     .puffs img {
         margin: 0;
         width: 7rem;
+    }
+    .customer {
+        font-size: 0.5em;
+    }
+    .home span {
+        animation: none;
     }
 }

@@ -57,3 +57,27 @@ function toggleMenu(){
         navList.style.maxHeight = "0px";
     }
 }
+
+
+
+
+
+const URL = 'https://jsonplaceholder.typicode.com/comments';
+
+let nextPerson = document.getElementById('next-customer');
+let getEmail = ()=>{
+
+    fetch(URL)
+        .then((data) => data.json())
+        .then((emails) => {
+            const randomUser = emails[Math.floor(Math.random()*emails.length)];
+            const email = randomUser.email;
+            const user = email.split('@')[0];
+            document.getElementById('customer').innerText = user;
+            console.log(email);
+            document.getElementById('customer-email').innerText = email;
+        })
+        .catch((err)=> console.log(err))
+}
+window.addEventListener('load',getEmail)
+nextPerson.addEventListener('click',getEmail)
