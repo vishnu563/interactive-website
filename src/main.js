@@ -66,7 +66,6 @@ const URL = 'https://jsonplaceholder.typicode.com/comments';
 
 let nextPerson = document.getElementById('next-customer');
 let getEmail = ()=>{
-
     fetch(URL)
         .then((data) => data.json())
         .then((emails) => {
