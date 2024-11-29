@@ -73,7 +73,6 @@ let getEmail = ()=>{
             const customerEmail = randomUser.email;
             const user = customerEmail.split('@')[0];
             document.getElementById('customer').innerText = user;
-            console.log(customerEmail);
             document.getElementById('customer-email').innerText = customerEmail;
         })
         .catch((err)=> console.log(err))
