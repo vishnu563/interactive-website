@@ -135,7 +135,7 @@ nav ul li:hover{
     display: flex;
     margin-left: 12rem;
     padding-bottom: 4rem;  
-    cursor: pointer;
+    
 }
 .offer ul li{
     list-style: none;
@@ -143,7 +143,8 @@ nav ul li:hover{
     letter-spacing:1rem;
     color: #484848;
     text-shadow: none;
-    animation: animate-offer 1s infinite linear;  
+    animation: animate-offer 1s infinite linear;
+    cursor: pointer;  
 }
 @keyframes typing{
     0%,100%{
