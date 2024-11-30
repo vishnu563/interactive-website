@@ -4,7 +4,6 @@
     padding: 0;
 }
 html{
-    background-color: rgb(44, 40, 40);
     scroll-behavior: smooth;
 }
 section h1{
@@ -416,7 +415,7 @@ nav ul li:hover{
 }
 .feedback h2{
     font-family: "Comic Neue", serif;
-    font-size: 80px;
+    font-size: 5em;
     width: 20rem;
     margin-left: 20rem;
 }
@@ -554,6 +553,154 @@ footer{
     animation-timeline: view();
     animation-range: entry 0 cover 25%;
 }
+/* FOR LARGE SCREEN */
+@media screen and (min-width:1500px) {
+    section h1{
+        font-size: 10em;
+    }
+    header nav {
+        height: 7rem;
+    }
+    .logo img{
+        width: 10rem;
+    }
+    .logo span {
+        font-size: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    nav ul {
+        font-size: 2em;
+    }
+    .home span{
+        width:9ch;
+        animation: typing 4s steps(8) forwards infinite;
+    }
+    .home h2{
+        margin-top: 5rem;
+        font-size: 7em;
+    }
+    .home p{
+        margin:5rem 0 3rem 0rem;
+        font-size: 4em;
+        max-width: 100%;
+    }
+    .offer ul {
+        display: flex;
+        margin-left: 0;
+        padding-bottom: 4rem;
+        justify-content: center;
+    }
+    .offer ul li {
+        font-size: 5em;
+    }
+    .philosophy p {
+        font-size: 4em;
+    }
+    .phi-img img {
+        height: 30rem;
+    }
+    .phi-img h3 {
+        font-size: 2em;
+    }
+    .menu p {
+        font-size: 4em;
+    }
+    .menu-items img {
+        width: 15rem;
+    }
+    .menu-items>div{
+        text-align: center;
+    }
+    .menu-items h3{
+        font-size: 4em;
+    }
+    .combo h3{
+        font-size: 4em;
+        text-align: center;
+        margin: 0;
+    }
+    .combo img {
+        margin-left: 12rem;
+        width: 15rem;
+    }
+    .menu-items ol li, .combo ol li {
+        padding: 1.5rem 0;
+        font-size: 2.5em;
+    }
+    .puffs h2 {
+        font-size: 10rem;
+    }
+    .puffs img {
+        margin: 5rem 0 0 30rem;
+        width: 50rem;
+    }
+    .puffs p {
+        font-size: 5em;
+    }
+    .find-us>p {
+        font-size: 4em;
+    }
+    .contact-details img {
+        width: 20rem;
+    }
+    .contact-details h3 {
+        font-size: 6em;
+    }
+    .contact-details p {
+        font-size: 3em;
+    }
+    .feedback h2 {
+        font-size: 9em;
+        width: 30rem;
+    }
+    .feedback form {
+        animation: none;
+        max-width: 30rem;
+        height: 35rem;
+        align-items: center;
+    }
+    form label {
+        font-size: 2.8rem;
+        padding-left: 5.5rem;
+    }
+    form input {
+        height: 4rem;
+        margin-left: 5rem;
+        width: 15rem;
+        font-size: 2em;
+    }
+    form textarea {
+        height: 4rem;
+        margin-left: 5rem;
+        min-width: 15rem;
+        max-width: 15rem;
+        font-size: 2em;
+    }
+    form button {
+        height: auto;
+        width: auto;
+        padding: 2rem 4rem;
+        margin-left: 0;
+        font-size: 2em;
+    }
+    footer{
+        height: 7rem;
+    }
+    footer p{
+        font-size: 2em;
+    }
+    .customer p{
+        font-size: 3em;
+    }
+    @keyframes typing{
+        0%,100% { width: 0ch; }
+        50% { width: 9ch; }
+    }
+}
+
 
 
 
