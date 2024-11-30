@@ -6,6 +6,19 @@
 html{
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar{
+    width: auto;
+}
+::-webkit-scrollbar-track{
+    background: rgb(11, 43, 63);
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(156, 102, 102);
+    border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(113, 63, 63);
+}
 section h1{
     display: flex;
     justify-content: center;
